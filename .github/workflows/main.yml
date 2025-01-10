@@ -29,10 +29,10 @@ jobs:
       - name: Build Project 
         run: npm run build
 
-deploy:
-  runs-on: ubuntu-latest
-  needs: build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
 
-  steps:
-    - name: Deploy to server
-      run: ./deploy.sh
+    steps:
+      - name: Deploy to server
+        run: ./deploy.sh
